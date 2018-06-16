@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistroContratoComponent implements OnInit {
 
+ 
   constructor() { }
 
   ngOnInit() {
