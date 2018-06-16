@@ -1,4 +1,12 @@
 export class Contrato{
     noContratto: string;
-    descripcion:Text;
+    descripcion:string;
+
+    constructor(
+        noContratto: string,
+        descripcion:string,
+    ){
+        this.noContratto=noContratto;
+        this.descripcion=descripcion;
+    }
 }
