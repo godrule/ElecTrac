@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Contrato } from "../shared/BLL/Contrato";
-import { TestObject } from 'protractor/built/driverProviders';
 
 @Component({
   selector: 'app-registro-contrato',
@@ -10,9 +8,7 @@ import { TestObject } from 'protractor/built/driverProviders';
 export class RegistroContratoComponent implements OnInit {
 
   contratos= [];
-  informacion=[];
-  titulo = 'Registro de Contratos';
-
+  
   constructor() { }
 
   ngOnInit() {
@@ -29,11 +25,12 @@ export class RegistroContratoComponent implements OnInit {
   Guardar(Registro)
   {
 
-    var contrato={ Contrato: Registro.value.noContrato, Info: Registro.value.descripcion};
+    var contrato={ Contrato: Registro.value.nocontrato, Info: Registro.value.descripcion};
 
     this.contratos.push(contrato);
 
     localStorage.setItem("Contratos",JSON.stringify(this.contratos));
+
     Registro.reset();
    
   }
