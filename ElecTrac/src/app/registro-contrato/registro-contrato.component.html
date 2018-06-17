@@ -1,21 +1,21 @@
-<h1>Registro Contrato</h1>
-<div>
-  <label>No. Contrato</label>
-  <input  id="Nocontrato" type="number">
-</input>
-</div>
+<form  #contratoformulario="ngModel" (ngSubmit)="Guardar(contratoformulario)" id="ContratoFormulario">
+  <div>
+    <h1>{{titulo}}</h1>
+  </div>
+  <div>
+    <label>No. Contrato</label>
+    <input id="Nocontrato" ngModel #noContrato="ngModel" type="number">
+    </input>
+  </div>
 
 
-<div>
+  <div>
     <label>Descripcion</label>
-    <input  id="descripcion" type="text">
-  </input>
+    <input ngModel #descripcion="ngModel" id="descripcion" type="text">
+    </input>
   </div>
 
   <div>
- 
-        <input  type="submit" value="Guardar">
-      </input>
-   
+    <input type="submit" class="btn btn-primary" value="Guardar"></input>
   </div>
-  
+</form>

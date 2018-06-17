@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Contrato } from "../shared/BLL/Contrato";
+import { TestObject } from 'protractor/built/driverProviders';
 
 @Component({
   selector: 'app-registro-contrato',
@@ -8,18 +9,33 @@ import { Contrato } from "../shared/BLL/Contrato";
 })
 export class RegistroContratoComponent implements OnInit {
 
-  contrato: Contrato;
- 
+  contratos= [];
+  informacion=[];
+  titulo = 'Registro de Contratos';
+
   constructor() { }
 
   ngOnInit() {
-    this.contrato=new Contrato("","");
+    this.cargarContratos();
   }
 
-  Guardar(noContrato,descripcion)
+  cargarContratos()
   {
-    this.contrato.descripcion=descripcion;
-    this.contrato.noContratto=noContrato;
+    if(localStorage.getItem("Contratos")){
+      this.contratos = JSON.parse(localStorage.getItem("Contratos"));
+    }
+  }
+
+  Guardar(Registro)
+  {
+
+    var contrato={ Contrato: Registro.value.noContrato, Info: Registro.value.descripcion};
+
+    this.contratos.push(contrato);
+
+    localStorage.setItem("Contratos",JSON.stringify(this.contratos));
+    Registro.reset();
+   
   }
 
 }
