@@ -25,7 +25,7 @@ export class RegistroContratoComponent implements OnInit {
   Guardar(Registro)
   {
 
-    var contrato={ Contrato: Registro.value.nocontrato, Info: Registro.value.descripcion};
+    var contrato={ Contrato: Registro.value.noContrato, Descripcion: Registro.value.descripcion};
 
     this.contratos.push(contrato);
 
