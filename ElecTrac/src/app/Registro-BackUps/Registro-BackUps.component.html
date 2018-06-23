@@ -1,4 +1,36 @@
-<form>
+<header class="mdl-cell mdl-cell--6-col  mdl-cell--12-col-phone">
+  <h3>Backup</h3>
+</header>
+
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--12-col">
+  <form #backup="ngForm">
+    <button type="submit" class="mdl-button mdl-js-button mdl-button--raised">
+      Buscar ruta
+    </button>
+    <br>
+    <br>
+
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <input name="ruta" class="mdl-textfield__input" ngModel #ruta="ngModel" type="text">
+      <label class="mdl-textfield__label" for="ruta">Ruta</label>
+    </div>
+    <br>
+
+    <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+      Guardar
+    </button>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
+      Cancelar
+    </button>
+  
+  </form>
+  </div>
+</div>
+
+
+<!-- <form>
 
   <div class="header">
     <h1>Registro de BackUps</h1>
@@ -19,4 +51,4 @@
     <input type="button" value="Guardar">
     <input type="button" value="Cancelar">
   </div>
-</form>
+</form> -->

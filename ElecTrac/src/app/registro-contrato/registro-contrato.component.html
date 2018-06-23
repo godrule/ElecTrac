@@ -1,4 +1,35 @@
-<form #contrato="ngForm" (ngSubmit)="Guardar(contrato)"  >
+<header class="mdl-cell mdl-cell--6-col  mdl-cell--12-col-phone">
+  <h3>Registro de contratos</h3>
+</header>
+
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--12-col">
+  <form #contrato="ngForm" (ngSubmit)="Guardar(contrato)"  >
+
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <input name="noContrato" class="mdl-textfield__input" ngModel #noContrato="ngModel" type="text" pattern="-?[0-9]*(\.[0-9]+)?">
+      <label class="mdl-textfield__label" for="noContrato">No. Contrato</label>
+    </div>
+    <br>
+
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <input name="descripcion" class="mdl-textfield__input" ngModel #descripcion="ngModel" type="text">
+      <label class="mdl-textfield__label" for="descripcion">Descripcion</label>
+    </div>
+
+    <div>
+      <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+        Guardar
+      </button>
+    
+    </div>
+  
+  </form>
+  </div>
+</div>
+
+
+<!-- <form #contrato="ngForm" (ngSubmit)="Guardar(contrato)"  >
   <div>
     <h1>Registro de Contratos</h1>
   </div>
@@ -21,4 +52,4 @@
    
   </div>
  
-</form>
+</form> -->
